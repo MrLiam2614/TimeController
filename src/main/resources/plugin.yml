@@ -1,0 +1,12 @@
+name: TimeController
+version: 0.0.1
+main: me.mrliam2614.TimeController.TimeController
+api-version: 1.16
+description: Controll time and weather
+author: MrLiam2614
+depend:
+  - FacilitisAPI
+commands:
+  timecontrol:
+    aliases: [tc, timecontrol, timecontroller]
+    permission: timecontroller.admin
