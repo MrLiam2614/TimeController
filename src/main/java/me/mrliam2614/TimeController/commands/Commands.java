@@ -1,9 +1,9 @@
 package me.mrliam2614.TimeController.commands;
 
 import me.mrliam2614.TimeController.TimeController;
+import me.mrliam2614.TimeController.events.EventTimeSkip;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.GameRule;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -68,7 +68,7 @@ public class Commands implements CommandExecutor, TabCompleter {
                 if (args[1].equalsIgnoreCase("unlock")) {
                     String type = args[0];
                     String world = ((Player) sender).getWorld().getName();
-                    Objects.requireNonNull(Bukkit.getWorld(world)).setGameRule(GameRule.DO_DAYLIGHT_CYCLE, true);
+                    Bukkit.getWorld(world).setGameRuleValue("doDaylightCycle", "true");
                     if (args.length >= 3) {
                         world = args[2];
                     }

@@ -2,7 +2,6 @@ package me.mrliam2614.TimeController.controls;
 
 import me.mrliam2614.TimeController.TimeController;
 import org.bukkit.Bukkit;
-import org.bukkit.GameRule;
 import org.bukkit.World;
 
 import java.util.ArrayList;
@@ -28,6 +27,8 @@ public class controller {
     }
 
     public void setTime() {
+        if(!plugin.world.getConfig().isSet("worlds"))
+            return;
         Set<String> worlds = plugin.world.getConfig().getConfigurationSection("worlds").getKeys(false);
         for (String world : worlds) {
             if (weatherWorldList.contains(world))
@@ -38,13 +39,14 @@ public class controller {
 
             World selWorld = Bukkit.getWorld(world);
 
-
             //Set time
             if (plugin.world.getConfig().isSet("worlds." + world + ".time")) {
                 long time = plugin.world.getConfig().getLong("worlds." + world + ".time");
                 selWorld.setTime(time);
-                selWorld.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
-                timeWorldList.add(world);
+                selWorld.setGameRuleValue("doDaylightCycle", "false");
+                Bukkit.getScheduler().runTaskLater(plugin, () -> {
+                    timeWorldList.add(world);
+                }, 2);
             }
 
 
