@@ -1,7 +1,6 @@
-package me.mrliam2614.TimeController.commands;
+package me.mrliam2614.commands;
 
-import me.mrliam2614.TimeController.TimeController;
-import me.mrliam2614.TimeController.events.EventTimeSkip;
+import me.mrliam2614.TimeController;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.World;

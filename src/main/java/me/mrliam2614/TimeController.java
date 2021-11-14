@@ -1,12 +1,11 @@
-package me.mrliam2614.TimeController;
+package me.mrliam2614;
 
-import me.mrliam2614.FacilitisAPI;
-import me.mrliam2614.TimeController.commands.Commands;
-import me.mrliam2614.TimeController.controls.controller;
-import me.mrliam2614.TimeController.controls.timeEvent;
-import me.mrliam2614.TimeController.controls.weatherEvent;
-import me.mrliam2614.TimeController.events.EventCaller;
-import me.mrliam2614.TimeController.utils.TimeConverter;
+import me.mrliam2614.commands.Commands;
+import me.mrliam2614.controls.controller;
+import me.mrliam2614.controls.timeEvent;
+import me.mrliam2614.controls.weatherEvent;
+import me.mrliam2614.events.EventCaller;
+import me.mrliam2614.utils.TimeConverter;
 import me.mrliam2614.config.FConfig;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,7 +14,7 @@ public class TimeController extends JavaPlugin {
 
     public FacilitisAPI facilitisAPI;
     public FConfig world;
-    public controller controller;
+    public me.mrliam2614.controls.controller controller;
     public TimeConverter timeConverter;
     private EventCaller eventCaller;
 

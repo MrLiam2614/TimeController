@@ -1,6 +1,6 @@
-package me.mrliam2614.TimeController.controls;
+package me.mrliam2614.controls;
 
-import me.mrliam2614.TimeController.TimeController;
+import me.mrliam2614.TimeController;
 import org.bukkit.World;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

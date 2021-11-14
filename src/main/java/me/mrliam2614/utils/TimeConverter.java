@@ -1,4 +1,4 @@
-package me.mrliam2614.TimeController.utils;
+package me.mrliam2614.utils;
 
 public class TimeConverter {
     public TimeConverter(){

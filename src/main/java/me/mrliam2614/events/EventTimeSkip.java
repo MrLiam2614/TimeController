@@ -1,4 +1,4 @@
-package me.mrliam2614.TimeController.events;
+package me.mrliam2614.events;
 
 import org.bukkit.World;
 import org.bukkit.event.Cancellable;
